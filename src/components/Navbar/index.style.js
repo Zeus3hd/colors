@@ -23,13 +23,20 @@ const MenuButtonContainer = styled.div`
   align-items: flex-end;
   z-index: 3;
   transition: 0.5s;
+  @media (min-width: 1024px) {
+    clip-path: circle(
+      ${({ isToggled }) => (isToggled ? "10vw" : "5vw")} at 100% 100%
+    );
+    width: ${({ isToggled }) => (isToggled ? "10vw" : "5vw")};
+    height: ${({ isToggled }) => (isToggled ? "10vw" : "5vw")};
+  }
 `;
 const MenuButton = styled.button`
   color: #fff;
   background: transparent;
   border: none;
   font-size: 1.3rem;
-  padding: 1rem;
+  padding: 0.6rem;
   cursor: pointer;
   position: relative;
   z-index: 50;
