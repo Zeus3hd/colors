@@ -53,4 +53,29 @@ const MenuLink = styled.a`
   transition: 0.5s;
 `;
 
-export { Wrapper, MenuButtonContainer, MenuButton, MenuLink };
+const DesktopNav = styled.ul`
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  z-index: 50;
+`;
+const DesktopNavLink = styled.li`
+  margin: 1rem;
+  font-weight: bold;
+  color: ${colors.black};
+  font-size: 0.9rem;
+  cursor: pointer;
+`;
+
+export {
+  Wrapper,
+  MenuButtonContainer,
+  MenuButton,
+  MenuLink,
+  DesktopNav,
+  DesktopNavLink,
+};

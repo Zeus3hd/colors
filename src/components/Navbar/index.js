@@ -4,6 +4,8 @@ import {
   MenuButtonContainer,
   MenuButton,
   MenuLink,
+  DesktopNav,
+  DesktopNavLink,
 } from "./index.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -26,6 +28,11 @@ const Navbar = () => {
           Contact
         </MenuLink>
       </MenuButtonContainer>
+      <DesktopNav>
+        <DesktopNavLink>Home</DesktopNavLink>
+        <DesktopNavLink>Store</DesktopNavLink>
+        <DesktopNavLink>Contact</DesktopNavLink>
+      </DesktopNav>
     </Wrapper>
   );
 };
