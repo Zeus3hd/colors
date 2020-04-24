@@ -12,6 +12,10 @@ const Wrapper = styled.div`
   left: 0;
   right: 0;
   z-index: -1;
+  transition: 0.4s;
+  @media (max-width: 1024px) {
+    opacity: 0.5;
+  }
   @media (min-width: 760px) {
     background-size: contain;
   }

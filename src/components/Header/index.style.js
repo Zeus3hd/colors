@@ -20,7 +20,7 @@ const Wrapper = styled.header`
 const TitleContainer = styled.div`
   font-size: 10vw;
   font-weight: 900;
-  background: rgba(255, 255, 255, 0.3);
+  /* background: rgba(255, 255, 255, 0.3); */
   padding: 0.3rem;
   @media (min-width: 1024px) {
     background: transparent;
