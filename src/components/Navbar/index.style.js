@@ -57,18 +57,26 @@ const DesktopNav = styled.ul`
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
   z-index: 50;
+  display: flex;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 const DesktopNavLink = styled.li`
   margin: 1rem;
   font-weight: bold;
-  color: ${colors.black};
+  color: ${colors.purple};
   font-size: 0.9rem;
   cursor: pointer;
+  transition: 0.4s;
+
+  &:hover {
+    color: ${colors.crimson};
+  }
 `;
 
 export {
