@@ -5,7 +5,11 @@ const colors = {
   black: "#22282E",
   blue: "#2777EF",
 };
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
 const ProductContainer = styled.div`
   position: relative;
   display: flex;
@@ -13,7 +17,7 @@ const ProductContainer = styled.div`
   overflow: hidden;
   padding: 2rem 0;
   @media (min-width: 1024px) {
-    flex-direction: row;
+    flex-direction: ${({ reversed }) => (reversed ? "row-reverse" : "row")};
     align-items: center;
   }
 `;
@@ -32,6 +36,7 @@ const ProductImage = styled.img`
 `;
 const ProductTextContainer = styled.div`
   padding: 0 1rem;
+  margin: 0.5rem;
 `;
 const CatchPhrase = styled.p`
   font-weight: bold;
