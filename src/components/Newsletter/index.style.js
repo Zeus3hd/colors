@@ -37,6 +37,7 @@ const FormContainer = styled.form`
     margin: 0;
     background: #fff;
     align-items: stretch;
+    position: static;
   }
 `;
 const FormTitle = styled.p`
@@ -71,6 +72,37 @@ const FormButton = styled.button`
   font-weight: bold;
   font-size: 1.2rem;
 `;
+
+const SocialContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  @media (min-width: 1024px) {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    left: -9rem;
+    transition: 0.4s ease-in;
+    &:hover {
+      left: 0;
+    }
+  }
+`;
+const SocialButton = styled.div`
+  margin: 0.5rem 2rem;
+  color: ${colors.purple};
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+`;
+const SocialLabel = styled.p`
+  margin-right: 1rem;
+  font-size: 0.95rem;
+  @media (max-width: 1024px) {
+    display: none;
+  }
+`;
 export {
   Wrapper,
   SvgBackground,
@@ -80,4 +112,7 @@ export {
   InputField,
   InputLabel,
   FormButton,
+  SocialContainer,
+  SocialButton,
+  SocialLabel,
 };
