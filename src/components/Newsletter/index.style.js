@@ -80,7 +80,7 @@ const SocialContainer = styled.div`
   @media (min-width: 1024px) {
     flex-direction: column;
     align-items: flex-start;
-    position: absolute;
+    position: relative;
     left: -9rem;
     transition: 0.4s ease-in;
     &:hover {

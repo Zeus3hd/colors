@@ -5,6 +5,7 @@ import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import Promotion from "./components/Promotion";
 import Newsletter from "./components/Newsletter";
+import Footer from "./components/Footer";
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Promotion />
       <Newsletter />
+      <Footer />
     </div>
   );
 }
