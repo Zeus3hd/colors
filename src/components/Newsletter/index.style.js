@@ -10,9 +10,9 @@ const Wrapper = styled.div`
 `;
 const SvgBackground = styled.img`
   width: 100%;
-  max-width: 450px;
+  max-width: 550px;
   z-index: -1;
-
+  margin: 1rem;
   @media (max-width: 1024px) {
     display: none;
   }
@@ -22,7 +22,7 @@ const FormContainer = styled.form`
   background-size: contain;
   background-position: right;
   position: absolute;
-  top: 0;
+  top: 5rem;
   margin: 2.5rem;
   padding: 2rem;
   width: 100%;
