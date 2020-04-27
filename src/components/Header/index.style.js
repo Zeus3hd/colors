@@ -58,14 +58,14 @@ const ShopButton = styled.button`
 `;
 
 const BackgroundWordsContainer = styled.div`
-  position: absolute;
+  position: sticky;
+  width: 100%;
   right: 0;
   top: 0;
   font-size: 10vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 100%;
   z-index: -1;
   mix-blend-mode: multiply;
   opacity: 0.2;
