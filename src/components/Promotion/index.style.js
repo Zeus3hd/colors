@@ -16,7 +16,6 @@ const ProductContainer = styled.div`
   flex-direction: column;
   overflow: hidden;
   padding: 2rem 0;
-  width: 100%;
   @media (min-width: 1024px) {
     flex-direction: ${({ reversed }) => (reversed ? "row-reverse" : "row")};
     align-items: center;

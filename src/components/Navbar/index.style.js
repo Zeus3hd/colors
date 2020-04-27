@@ -12,7 +12,6 @@ const MenuButtonContainer = styled.div`
   bottom: 0;
   right: 0;
   background: ${colors.crimson};
-  mix-blend-mode: soft-light;
   clip-path: circle(
     ${({ isToggled }) => (isToggled ? "50vw" : "20vw")} at 100% 100%
   );
