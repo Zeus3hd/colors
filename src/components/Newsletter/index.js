@@ -10,11 +10,12 @@ import {
   FormButton,
 } from "./index.style";
 import svgBg from "../../img/newsletterbg.png";
+import formBg from "../../img/formbg.png";
 const Newsletter = () => {
   return (
     <Wrapper>
       <SvgBackground src={svgBg} />
-      <FormContainer>
+      <FormContainer bg={formBg}>
         <FormTitle>GET IN TOUCH</FormTitle>
         <InputGroup>
           <InputLabel>Name</InputLabel>

@@ -18,17 +18,26 @@ const SvgBackground = styled.img`
   }
 `;
 const FormContainer = styled.form`
-  background: #fff;
+  background: #fff url(${({ bg }) => bg}) no-repeat;
+  background-size: contain;
+  background-position: right;
   position: absolute;
   top: 0;
   margin: 2.5rem;
   padding: 2rem;
   width: 100%;
-  max-width: 450px;
+  max-width: 650px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  @media (max-width: 1024px) {
+    margin: 0;
+    background: #fff;
+    align-items: stretch;
+  }
 `;
 const FormTitle = styled.p`
   font-weight: bold;
