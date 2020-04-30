@@ -7,6 +7,7 @@ import Promotion from "./components/Promotion";
 import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
 import Store from "./components/Store";
+import Product from "./components/Product";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
             <Newsletter />
           </div>
         </Route>
-        <Route path="/store" component={Store} />
+        <Route exact path="/store" component={Store} />
+        <Route path="/store/1" component={Product} />
       </Switch>
       <Footer />
     </Router>
