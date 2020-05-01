@@ -26,6 +26,7 @@ const BigImage = styled.div`
   background-position: center;
   width: 50vw;
   height: 50vh;
+  transition: 0.4s;
 `;
 const Details = styled.div`
   flex: 1;
