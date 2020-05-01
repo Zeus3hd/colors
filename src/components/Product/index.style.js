@@ -18,19 +18,14 @@ const Wrapper = styled.div`
 
 const BigImageContainer = styled.div`
   flex: 1;
-  box-sizing: border-box;
   display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 const BigImage = styled.div`
   background: url(${({ bg }) => bg});
   background-size: cover;
   background-position: center;
-  min-width: 70vh;
-  min-height: 70vh;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: 0.5s;
+  width: 50vw;
+  height: 50vh;
 `;
 const Details = styled.div`
   flex: 1;
@@ -38,7 +33,7 @@ const Details = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 4rem;
+  margin: 4vw;
 `;
 
 const TitleContainer = styled.div`
@@ -75,10 +70,14 @@ const ThumbnailsContainer = styled.div`
 const Thumbnail = styled.div`
   flex: 1;
   background: url(${({ bg }) => bg});
-  min-height: 140px;
   background-size: cover;
-  margin: 0 1rem;
+  background-position: center;
+  margin: 0 0.5rem;
   cursor: pointer;
+  width: 10vw;
+  height: 10vw;
+  min-width: 100px;
+  min-height: 100px;
 `;
 
 export {
