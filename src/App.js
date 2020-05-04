@@ -8,6 +8,7 @@ import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
 import Store from "./components/Store";
 import Product from "./components/Product";
+import NewPost from "./components/NewPost";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         </Route>
         <Route exact path="/store" component={Store} />
         <Route path="/store/1" component={Product} />
+        <Route path="/new" component={NewPost} />
       </Switch>
       <Footer />
     </Router>
