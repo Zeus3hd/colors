@@ -13,7 +13,7 @@ import {
 
 const Store = () => {
   const [data, setData] = useState([]);
-  const [activeCategory, setActiveCategory] = useState("abaya");
+  const [activeCategory, setActiveCategory] = useState("all");
   useEffect(() => {
     fetch("/products")
       .then((res) => {
@@ -78,6 +78,8 @@ const Store = () => {
                 </ProductSellingPointContainer>
               </Product>
             );
+          } else {
+            return false;
           }
         })}
       </Gallery>
