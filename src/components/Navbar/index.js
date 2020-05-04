@@ -9,7 +9,7 @@ import {
 } from "./index.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -45,9 +45,15 @@ const Navbar = () => {
         </MenuLink>
       </MenuButtonContainer>
       <DesktopNav>
-        <DesktopNavLink>Home</DesktopNavLink>
-        <DesktopNavLink>Store</DesktopNavLink>
-        <DesktopNavLink>Contact</DesktopNavLink>
+        <DesktopNavLink>
+          <Link to="/">Home</Link>
+        </DesktopNavLink>
+        <DesktopNavLink>
+          <Link to="/store">Store</Link>
+        </DesktopNavLink>
+        <DesktopNavLink>
+          <Link to="/contact">Contact</Link>
+        </DesktopNavLink>
       </DesktopNav>
     </Wrapper>
   );

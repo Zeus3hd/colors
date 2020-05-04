@@ -52,6 +52,7 @@ const MenuLink = styled(Link)`
   text-transform: uppercase;
   opacity: ${({ istoggled }) => (istoggled ? "1" : "0")};
   transition: 0.5s;
+  text-decoration: none;
 `;
 
 const DesktopNav = styled.ul`
@@ -77,6 +78,9 @@ const DesktopNavLink = styled.li`
 
   &:hover {
     color: ${colors.crimson};
+  }
+  > * {
+    text-decoration: none;
   }
 `;
 
