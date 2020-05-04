@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
 const colors = {
   crimson: "#D72036",
   purple: "#833895",
@@ -13,10 +15,10 @@ const MenuButtonContainer = styled.div`
   right: 0;
   background: ${colors.crimson};
   clip-path: circle(
-    ${({ isToggled }) => (isToggled ? "50vw" : "20vw")} at 100% 100%
+    ${({ istoggled }) => (istoggled ? "50vw" : "20vw")} at 100% 100%
   );
-  width: ${({ isToggled }) => (isToggled ? "50vw" : "20vw")};
-  height: ${({ isToggled }) => (isToggled ? "50vw" : "20vw")};
+  width: ${({ istoggled }) => (istoggled ? "50vw" : "20vw")};
+  height: ${({ istoggled }) => (istoggled ? "50vw" : "20vw")};
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -24,10 +26,10 @@ const MenuButtonContainer = styled.div`
   transition: 0.5s;
   @media (min-width: 1024px) {
     clip-path: circle(
-      ${({ isToggled }) => (isToggled ? "10vw" : "5vw")} at 100% 100%
+      ${({ istoggled }) => (istoggled ? "10vw" : "5vw")} at 100% 100%
     );
-    width: ${({ isToggled }) => (isToggled ? "10vw" : "5vw")};
-    height: ${({ isToggled }) => (isToggled ? "10vw" : "5vw")};
+    width: ${({ istoggled }) => (istoggled ? "10vw" : "5vw")};
+    height: ${({ istoggled }) => (istoggled ? "10vw" : "5vw")};
   }
 `;
 const MenuButton = styled.button`
@@ -41,14 +43,14 @@ const MenuButton = styled.button`
   z-index: 50;
 `;
 
-const MenuLink = styled.a`
+const MenuLink = styled(Link)`
   position: absolute;
   left: ${({ left }) => left};
   bottom: ${({ bottom }) => bottom};
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  opacity: ${({ isToggled }) => (isToggled ? "1" : "0")};
+  opacity: ${({ istoggled }) => (istoggled ? "1" : "0")};
   transition: 0.5s;
 `;
 
