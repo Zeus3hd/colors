@@ -18,6 +18,7 @@ import imageTwo from "../../img/content/abaya6.jpg";
 import imageThree from "../../img/content/abaya7.jpg";
 
 const Product = () => {
+  // eslint-disable-next-line
   const [data, setDate] = useState([imageOne, imageTwo, imageThree]);
   const [activeImage, setActiveImage] = useState(0);
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Wrapper,
   CategoriesContainer,
@@ -10,20 +10,16 @@ import {
   ProductSellingPoint,
   ProductPrice,
 } from "./index.style";
-import productOne from "../../img/content/abaya5.jpg";
-import productTwo from "../../img/content/abaya6.jpg";
-import productThree from "../../img/content/abaya7.jpg";
-import productFour from "../../img/content/abaya8.jpg";
-import productFive from "../../img/content/abaya9.jpg";
 
 const Store = () => {
-  const [data, setData] = useState([
-    productOne,
-    productTwo,
-    productThree,
-    productFour,
-    productFive,
-  ]);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("/products")
+      .then((res) => {
+        return res.json();
+      })
+      .then((snapshot) => setData(snapshot));
+  }, []);
   return (
     <Wrapper>
       <CategoriesContainer>
@@ -34,7 +30,7 @@ const Store = () => {
       <Gallery>
         {data.map((item, i) => {
           return (
-            <Product key={i} bg={item}>
+            <Product key={i} bg={item.imageurl["en-US"]}>
               <ProductTitle>TITLE HERE</ProductTitle>
               <ProductPrice>$85,43</ProductPrice>
               <ProductSellingPointContainer>
