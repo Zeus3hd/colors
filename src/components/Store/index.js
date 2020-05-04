@@ -21,7 +21,6 @@ const Store = () => {
       })
       .then((snapshot) => {
         setData(snapshot);
-        console.log(snapshot[0].type["en-US"]);
       });
   }, []);
 
@@ -61,6 +60,8 @@ const Store = () => {
                 </ProductSellingPointContainer>
               </Product>
             );
+          } else {
+            return null;
           }
         })}
       </Gallery>
