@@ -51,8 +51,8 @@ const Store = () => {
           if (item.type["en-US"] === activeCategory) {
             return (
               <Product key={i} bg={item.imageurl["en-US"]}>
-                <ProductTitle>TITLE HERE</ProductTitle>
-                <ProductPrice>$85,43</ProductPrice>
+                <ProductTitle>{item.title["en-US"]}</ProductTitle>
+                <ProductPrice>${item.price["en-US"]}</ProductPrice>
                 <ProductSellingPointContainer>
                   <ProductSellingPoint>SELLING POINT</ProductSellingPoint>
                   <ProductSellingPoint>SELLING POINT</ProductSellingPoint>
