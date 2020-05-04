@@ -18,6 +18,7 @@ const CategoryButton = styled.button`
   padding: 0;
   color: ${({ active }) => (active ? colors.crimson : colors.black + "99")};
   font-weight: 700;
+  cursor: pointer;
 `;
 const Gallery = styled.div`
   display: grid;
