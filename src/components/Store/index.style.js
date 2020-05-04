@@ -38,6 +38,7 @@ const Product = styled.div`
   justify-content: space-evenly;
   align-items: center;
   color: #fff;
+  cursor: pointer;
   > * {
     opacity: 0;
     display: none;
