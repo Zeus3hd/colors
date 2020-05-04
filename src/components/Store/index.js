@@ -28,6 +28,12 @@ const Store = () => {
     <Wrapper>
       <CategoriesContainer>
         <CategoryButton
+          active={activeCategory === "all"}
+          onClick={() => setActiveCategory("all")}
+        >
+          All
+        </CategoryButton>
+        <CategoryButton
           active={activeCategory === "dress"}
           onClick={() => setActiveCategory("dress")}
         >
@@ -60,8 +66,18 @@ const Store = () => {
                 </ProductSellingPointContainer>
               </Product>
             );
-          } else {
-            return null;
+          } else if (activeCategory === "all") {
+            return (
+              <Product key={i} bg={item.imageurl["en-US"]}>
+                <ProductTitle>{item.title["en-US"]}</ProductTitle>
+                <ProductPrice>${item.price["en-US"]}</ProductPrice>
+                <ProductSellingPointContainer>
+                  <ProductSellingPoint>SELLING POINT</ProductSellingPoint>
+                  <ProductSellingPoint>SELLING POINT</ProductSellingPoint>
+                  <ProductSellingPoint>SELLING POINT</ProductSellingPoint>
+                </ProductSellingPointContainer>
+              </Product>
+            );
           }
         })}
       </Gallery>
